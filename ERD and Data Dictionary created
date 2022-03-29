@@ -1,6 +1,0 @@
-# Extract the ERD from the Rockbuster database and save it as an image (PNG or JPEG)
-
-All the fact tables and all the dimension tables were listed in the schema. For each table, I listed every column and its data type, and write a brief description of the column
-
---The SQL syntax for selecting a table is:
-SELECT * FROM film would return the film table.
