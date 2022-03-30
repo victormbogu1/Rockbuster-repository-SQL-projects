@@ -1,5 +1,0 @@
--- The query below will give you an estimate of how long it will run to query the film table and helps to save time and money.
-
-Explain
-SELECT *
-FROM film
