@@ -1,0 +1,37 @@
+-- This query is to find the top 10 countries for Rockbuster in terms of customer numbers
+
+SELECT
+D. country,
+COUNT (customer_id) AS total_of_customers
+FROM customer A
+INNER JOIN address B ON A.address_id = B.address_id
+INNER JOIN city C ON B.city_id = C.city_id
+INNER JOIN country D ON C.country_id = D.country_id
+GROUP BY country
+ORDER BY total_of_customers DESC
+LIMIT 10;
+
+-- This query is to find the top 10 cities within the top 10 countries identified in step 1.
+
+SELECT
+D. country,
+C.city,
+COUNT (customer_id) AS total_of_customers
+FROM customer A
+INNER JOIN address B ON A.address_id = B.address_id
+INNER JOIN city C ON B.city_id = C.city_id
+INNER JOIN country D ON C.country_id = D.country_id
+WHERE D.country IN
+( 'India',
+'China',
+'United States',
+'Japan',
+'Mexico',
+'Brazil',
+'Russian Federation',
+'Philippines',
+'Turkey',
+'Indonesia')
+GROUP BY city,country
+ORDER BY total_of_customers DESC
+LIMIT 10;
