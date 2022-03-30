@@ -1,0 +1,54 @@
+/* Check for and clean dirty data: Find out if the film table and the customer table contain any dirty data, specifically non-uniform or duplicate data, or missing values*/
+
+-- Below to check for duplicate value from film table
+SELECT title, release_year, language_id, rental_duration,
+COUNT(*)
+FROM film
+GROUP BY tittle, release_year, language_id, rental_duration,
+HAVING COUNT(*) > 1;
+
+--Shows only unique records from the film table
+
+SELECT title,
+       release_year,
+       language_id,
+       rental_duration
+FROM film
+GROUP BY title,
+         release_year,
+         language_id,
+         rental_duration;
+        
+--Returns only unique records from the film table
+
+SELECT DISTINCT title,
+                release_year,
+                language_id,
+                rental_duration
+FROM film;     
+
+-- Summarize your data: Use SQL to calculate descriptive statistics for both the film table. For numerical columns,
+this means finding the minimum, maximum, and average values. For non-numerical columns, calculate the mode value.
+
+SELECT MIN(release_year) AS min _release_year,
+MAX(release_year) AS max_release_year,
+AVG(release_year) AS average_release_year,
+MIN(rental_duration) AS min_rental_duration,
+MAX(rental_duration) AS max_rental_duration,
+AVG(rental_duration) AS average_rental_duration,
+FROM film;
+
+-- Below are non-numerical columns from film table
+SELECT mode() WITHIN GROUP (ORDER BY rating)
+       AS modal_value
+FROM film;
+
+--Count films by grouping them with thier rating
+
+SELECT rating,
+       COUNT(*)
+FROM film
+GROUP BY rating
+ORDER BY COUNT(*)
+
+
