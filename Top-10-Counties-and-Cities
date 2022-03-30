@@ -1,3 +1,5 @@
+-- Joining tables or combining between the tables using their common keys.
+
 -- This query is to find the top 10 countries for Rockbuster in terms of customer numbers
 
 SELECT
