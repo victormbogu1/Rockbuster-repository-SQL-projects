@@ -1,4 +1,4 @@
-/* In order to extract a subset of records from a database, you need to filter the data. Below are the few queries for filtering Rockbuster dataset */
+/* In order to extract a subset of records from the Rockbuster's database, you need to filter the data. Below are the few queries for filtering Rockbuster dataset */
 
 --Film length is more than 120 minutes and rental rate is more than 2.99
 
