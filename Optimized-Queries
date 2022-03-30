@@ -1,0 +1,5 @@
+-- The querry below will give you an estimate of how long that query will take to run and helps to save time and money.
+
+Explain
+SELECT *
+FROM film
