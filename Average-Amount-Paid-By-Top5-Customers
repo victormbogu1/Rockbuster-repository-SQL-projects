@@ -1,6 +1,6 @@
 -- Performing Subqueries
 
--- This finds the average amount paid by the top 5 customers.
+-- This finds the average amount paid by the top 5 customers Rockbuster's database
 
 SELECT AVG(total_amount_paid) AS average_amount 
 FROM 
