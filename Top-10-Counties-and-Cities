@@ -1,6 +1,6 @@
--- Joining tables or combining between the tables using their common keys.
+-- Joining tables or combining between the tables using their common keys in the Rockbuster's database.
 
--- This query is to find the top 10 countries for Rockbuster in terms of customer numbers
+-- This query is to find the top 10 countries for Rockbuster
 
 SELECT
 D. country,
@@ -13,7 +13,7 @@ GROUP BY country
 ORDER BY total_of_customers DESC
 LIMIT 10;
 
--- This query is to find the top 10 cities within the top 10 countries identified in step 1.
+-- This query is to find the top 10 cities within the top 10 countries identified in step above.
 
 SELECT
 D. country,
