@@ -1,11 +1,5 @@
 /* In order to extract a subset of records from a database, you need to filter the data. Below are the few queries for filtering Rockbuster dataset */
 
--- Finding Film title that contains the word Uptown in any position
-
-SELECT film_id, title, description
-FROM film
-WHERE title LIKE '%Uptown%'
-
 --Film length is more than 120 minutes and rental rate is more than 2.99
 
 SELECT film_id, title, length, rental_rate
