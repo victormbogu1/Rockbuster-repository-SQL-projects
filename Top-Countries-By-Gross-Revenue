@@ -1,4 +1,4 @@
--- Gross revenue by top Countries
+-- Gross revenue by top Countries in the Rockbuster's database
 
 SELECT country,	
 SUM (amount) AS gross_revenue	
