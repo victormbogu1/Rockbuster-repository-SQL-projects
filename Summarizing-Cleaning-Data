@@ -1,4 +1,5 @@
-/* Check for and clean dirty data: Find out if the film table and the customer table contain any dirty data, specifically non-uniform or duplicate data, or missing values*/
+/* Check for and clean dirty data in the Rocbuster's database: Find out if the film table and the customer table contain any dirty data, 
+specifically non-uniform or duplicate data, or missing values*/
 
 -- Below to check for duplicate value from film table
 SELECT title, release_year, language_id, rental_duration,
