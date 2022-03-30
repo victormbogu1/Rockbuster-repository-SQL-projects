@@ -1,0 +1,24 @@
+-- Summary of the data
+
+SELECT 						
+Release year of film						
+     MIN(release_year) AS min_release_year,						
+	 MAX(release_year) AS max_release_year,					
+	 AVG(release_year) AS avg_release_year,					
+Rental duration of film						
+	 MIN(rental_duration) AS min_rental_duration,					
+	 MAX(rental_duration) AS max_rental_duration,					
+	 AVG(rental_duration) AS avg_rental_duration,					
+Rental rate of film						
+	 MIN(rental_rate) AS min_rental_rate,					
+	 MAX(rental_rate) AS max_rental_rate,					
+	 AVG(rental_rate) AS avg_rental_rate,					
+Length of film						
+	 MIN(length) AS min_rental_length,					
+	 Max(length) AS max_rental_length,					
+	 AVG(length) AS avg_rental_length,					
+Replacement cost of film						
+	 MIN(replacement_cost) AS min_rental_replacement_cost,					
+	 MAX(replacement_cost) AS max_rental_replacement_cost,					
+	 AVG(replacement_cost) AS avg_rental_replacement_cost					
+FROM film;						
